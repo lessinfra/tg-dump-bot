@@ -1,0 +1,1 @@
+Hosting with Cloudflare worker. One could use this bot from [here](https://t.me/json_dumperbot)
