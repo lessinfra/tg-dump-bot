@@ -5,10 +5,11 @@ addEventListener('fetch', event => {
 async function handleRequest(req) {
   let request = await req.json()
   console.log('function handle')
+  console.log(request)
   let chatid
-  if (Array.isArray(request.message)) {
+  if ( request.hasOwnProperty('my_chat_member')) {
     console.log('is array')
-    chatid = request.message[0].my_chat_member.chat.id
+    chatid = request.my_chat_member.chat.id
   } else {
     console.log('not array.')
     if (request.hasOwnProperty('edited_message')) {
